@@ -2,6 +2,7 @@ import { exec } from "child_process";
 import { writeFile } from "fs";
 import path from "path";
 import process, { exit } from "process";
+
 export default function VersionWriter() {
   exec("git rev-list HEAD --count", (error, stdout, stderr) => {
     if (error) {
@@ -9,7 +10,6 @@ export default function VersionWriter() {
       return;
     }
     if (stdout) {
-      console.log(`stdout: ${stdout}`);
       const commits = stdout.split("");
       // by using the number of commits, convert them to a version like string
       convert_to_version(commits);

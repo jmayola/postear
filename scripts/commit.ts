@@ -9,10 +9,10 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-// requiere commit
+// require commit
 rl.question("Introduce your comments: ", (response) => {
-    if (response) create_commit(response);
-    else exit("A response is required.")
+  if (response) create_commit(response);
+  else exit("A response is required.");
 });
 
 function create_commit(response: string) {
@@ -21,8 +21,9 @@ function create_commit(response: string) {
     console.log("commit has been created; ", stdout);
   });
   console.log("Changing version...");
-  if(VersionWriter()){
-      console.log("Version has changed");
-      exit(0)
+  if (VersionWriter()) {
+    VersionWriter();
+    console.log("Version has changed");
+    exit(0);
   }
 }
