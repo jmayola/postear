@@ -16,16 +16,17 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={amarante.className} suppressHydrationWarning>
-      <body className="min-h-screen flex flex-col bg-gradient-to-b from-slate-100 to-slate-500 dark:from-slate-700 dark:to-slate-800 text-slate-900 dark:text-slate-100">
+    <html lang="en" className={amarante.className} suppressHydrationWarning={true}>
+      <body className="min-h-screen flex flex-col bg-gradient-to-b from-slate-100 to-slate-300 dark:from-slate-700 dark:to-slate-800 text-slate-900 dark:text-slate-100">
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem={false}
         >
           <Header />
-          <main className="flex-1 container mx-auto px-4 py-8 grid grid-cols-1 gap-5 container mx-auto px-4 py-8">
-            {children}</main>
+          <main className="flex-1 container mx-auto px-4 py-8 grid grid-cols-1 gap-5 ">
+            {children}
+          </main>
           <Footer />
         </ThemeProvider>
       </body>
