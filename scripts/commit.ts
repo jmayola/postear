@@ -21,6 +21,8 @@ function create_commit(response: string) {
     console.log("commit has been created; ", stdout);
   });
   console.log("Changing version...");
-  VersionWriter();
-  exit(0)
+  if(VersionWriter()){
+      console.log("Version has changed");
+      exit(0)
+  }
 }

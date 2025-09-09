@@ -51,4 +51,5 @@ export default function VersionWriter() {
       }
     );
   }
+  return true
 }
