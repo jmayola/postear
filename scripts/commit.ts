@@ -22,4 +22,5 @@ function create_commit(response: string) {
   });
   console.log("Changing version...");
   VersionWriter();
+  exit(0)
 }
