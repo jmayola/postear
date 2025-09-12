@@ -1,39 +1,53 @@
-"use client"
+"use client";
 import { IoLogoGithub } from "react-icons/io5";
 import { useEffect, useState } from "react";
 
-
-
 export default function Footer() {
-const [Version, setVersion] = useState("...")
+  const [Version, setVersion] = useState("...");
 
-async function getVersion(){
-    const data = await fetch("/VERSION")
-    const version = await data.text()
+  async function getVersion() {
+    const data = await fetch("/VERSION");
+    const version = await data.text();
     if (version === null) {
-        return setVersion("...")
+      return setVersion("...");
+    } else {
+      return setVersion(version);
     }
-    else {
-        return setVersion(version)
-    }
-}
+  }
 
-useEffect(() => {
-  return () => {
-    getVersion()
-}},[])
+  useEffect(() => {
+    return () => {
+      getVersion();
+    };
+  }, []);
 
-
-return (
-<footer className="mt-16 border-t border-slate-200 dark:border-slate-800">
-<div className="container mx-auto max-w-5xl px-4 py-6 text-sm text-slate-600 dark:text-slate-300 flex items-center justify-between">
-<p>
-Hecho con <span className="text-rose-500">❤</span> — {Version}
-</p>
-<a href="https://github.com/jmayola/postear" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-slate-900 dark:hover:text-white">
-<IoLogoGithub /> 
-</a>
-</div>
-</footer>
-);
+  return (
+    <footer className="mt-16 border-t border-slate-200 dark:border-slate-800">
+      <div className="container mx-auto max-w-5xl px-4 py-6 text-sm text-slate-600 dark:text-slate-300 items-center justify-between grid grid-cols-3">
+        <p>
+          Hecho con <span className="text-rose-500">❤</span> por Julian Mayola —
+          Version {Version}
+        </p>
+        <div className="block">
+          <h4 className="text-2xl font-bold ">Navegador</h4>
+          <ul>
+            <a href="/notes">
+              <li className="text-xl">Notas</li>
+            </a>
+            <a href="/timers">
+              <li className="text-xl">Temporizadores</li>
+            </a>
+          </ul>
+        </div>
+        <a
+          href="https://github.com/jmayola/postear"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 hover:text-slate-900 dark:hover:text-white"
+        >
+          <IoLogoGithub size={32} />
+        </a>
+      </div>
+    </footer>
+  );
 }

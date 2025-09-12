@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Amarante } from "next/font/google";
 import "@/app/globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import Head from "next/head";
 
 const amarante = Amarante({ subsets: ["latin"], weight: "400" });
 
@@ -17,14 +18,281 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={amarante.className} suppressHydrationWarning={true}>
-      <body className="min-h-screen flex flex-col bg-gradient-to-b from-slate-100 to-slate-300 dark:from-slate-700 dark:to-slate-800 text-slate-900 dark:text-slate-100">
+      <Head>
+          <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/icons/favicon-16x16.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/icons/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="48x48"
+        href="/icons/favicon-48x48.png"
+      />
+      <link rel="manifest" href="/icons/manifest.webmanifest" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="theme-color" content="#ff66cc" />
+      <meta name="application-name" content="Postear" />
+      <link
+        rel="apple-touch-icon"
+        sizes="57x57"
+        href="/icons/apple-touch-icon-57x57.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="60x60"
+        href="/icons/apple-touch-icon-60x60.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="72x72"
+        href="/icons/apple-touch-icon-72x72.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="76x76"
+        href="/icons/apple-touch-icon-76x76.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="114x114"
+        href="/icons/apple-touch-icon-114x114.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="120x120"
+        href="/icons/apple-touch-icon-120x120.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="144x144"
+        href="/icons/apple-touch-icon-144x144.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="152x152"
+        href="/icons/apple-touch-icon-152x152.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="167x167"
+        href="/icons/apple-touch-icon-167x167.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/icons/apple-touch-icon-180x180.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="1024x1024"
+        href="/icons/apple-touch-icon-1024x1024.png"
+      />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent"
+      />
+      <meta name="apple-mobile-web-app-title" content="Postear" />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-640x1136.png"
+      />
+      /
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-1136x640.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-750x1334.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-1334x750.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-1125x2436.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-2436x1125.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-1170x2532.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-2532x1170.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-1179x2556.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-2556x1179.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-828x1792.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-1792x828.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-1242x2688.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-2688x1242.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-1242x2208.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-2208x1242.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-1284x2778.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-2778x1284.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-1290x2796.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-2796x1290.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-1488x2266.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-2266x1488.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-1536x2048.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-2048x1536.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-1620x2160.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-2160x1620.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 820px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-1640x2160.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 820px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-2160x1640.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-1668x2388.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-2388x1668.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-1668x2224.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-2224x1668.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="/icons/apple-touch-startup-image-2048x2732.png"
+      />
+      <link
+        rel="apple-touch-startup-image"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="/icons/apple-touch-startup-image-2732x2048.png"
+      />
+      <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta
+        name="msapplication-TileImage"
+        content="/icons/mstile-144x144.png"
+      />
+      <meta name="msapplication-config" content="/icons/browserconfig.xml" />
+      <link
+        rel="yandex-tableau-widget"
+        href="/icons/yandex-browser-manifest.json"
+      />
+      </Head>
+      <body className="min-h-screen flex flex-col bg-gradient-to-tr from-slate-100 to-slate-300 dark:from-zinc-700 dark:to-zinc-900 text-slate-900 dark:text-slate-100" >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem={false}
         >
           <Header />
-          <main className="flex-1 container mx-auto px-4 py-8 grid grid-cols-1 gap-5 ">
+          <main className="flex-1 container grid grid-cols-1 gap-5 place-content-center center w-screen">
             {children}
           </main>
           <Footer />

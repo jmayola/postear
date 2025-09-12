@@ -1,9 +1,9 @@
 "use client";
 
-import Cardsticky from "../svg/Cardsticky";
+import Cardswapping from "@/app/animations/Cardswapping";
 function Presentation() {
   return (
-    <section className="grid grid-cols-2 h-screen-nav">
+    <section className="grid grid-cols-2 h-screen-nav w-screen p-5">
       <div className="z-10">
         <h1 className="heading-1">Postear!</h1>
         <h2 className="heading-2 ">
@@ -18,25 +18,8 @@ function Presentation() {
           <button>Temporizadores</button>
         </a>
       </div>
-      <div className="grid grid-cols-3 place-content-center p-10 z-0">
-        <Cardsticky
-          height="150"
-          width="125"
-          color="#ffff00"
-          className="relative color-100 max-h-1 rotate-12"
-        />
-        <Cardsticky
-          height="150"
-          width="125"
-          color="#ffff00"
-          className="relative color-300 max-h-1 rotate-12"
-        />
-        <Cardsticky
-          height="150"
-          width="125"
-          color="#ffff00"
-          className="relative color-800 max-h-1 rotate-12"
-        />
+      <div className="grid grid-cols-3 place-content-center p-10 z-0 relative">
+        <Cardswapping/>
       </div>
     </section>
   );

@@ -19,8 +19,10 @@ html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
 
 /* headings */
 p { @apply font-medium p-5 text-2xl}
-.heading-1 { @apply font-extrabold p-5 text-8xl }
-.heading-2 { @apply font-semibold p-5 text-4xl}
+.heading-1 { @apply font-extrabold p-5 text-8xl  text-shadow-lg dark:text-shadow-gray-900 ;}
+.heading-2 { @apply font-bold p-5 text-4xl text-shadow-lg dark:text-shadow-gray-900 ;}
+.heading-3 { @apply font-semibold p-5 text-2xl text-shadow-lg dark:text-shadow-gray-900 ;}
+.heading-4 { @apply font-black p-5 text-xl text-shadow-lg dark:text-shadow-gray-900 ;}
 
 /* cards */
 .card { @apply rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm bg-white dark:bg-slate-900; }

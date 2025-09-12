@@ -2,37 +2,43 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   width="100.0001mm"
+   height="124.9996mm"
+   viewBox="0 0 100.0001 124.9996"
    version="1.1"
-   id="svg2993"
-   xml:space="preserve"
-   width="458.19522"
-   height="534.87744"
+   id="svg5"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><defs
-     id="defs2997"><linearGradient
-       xlink:href="#linearGradient1293"
-       id="linearGradient1295"
-       x1="119.34093"
-       y1="164.88423"
-       x2="133.38809"
-       y2="178.84444"
-       gradientUnits="userSpaceOnUse" /><linearGradient
-       id="linearGradient1293"><stop
-         style="stop-color:#000000;stop-opacity:1;"
-         offset="0"
-         id="stop1289" /><stop
-         style="stop-color:#ff00ff;stop-opacity:1;"
-         offset="1"
-         id="stop1291" /></linearGradient></defs><g
-     id="g3003"
-     transform="matrix(3.7795276,0,0,3.7795276,-45.948768,-141.07)"><path
-       style="fill:#ff00ff;stroke-width:0.264583"
-       d="M 12.157278,37.32477 H 133.37312 v 125.44436 l -16.1008,-0.0255 -0.11451,16.1008 H 12.157278 Z"
-       id="path322"
-       sodipodi:nodetypes="ccccccc" /><path
-       style="fill:url(#linearGradient1295);fill-opacity:1;stroke-width:0.264583"
-       d="m 117.15781,178.84443 0.11451,-16.1008 16.1008,0.0255 c 0,0 1.12884,16.0753 -16.21531,16.0753 z"
-       id="path587" /></g></svg>
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-12.799735,-97.770261)">
+    <path
+       id="rect111"
+       style="fill:#ffdd55;stroke-width:0.264583"
+       d="m 12.799736,97.77026 v 124.9996 H 92.799504 V 202.77005 H 112.79983 V 97.77026 Z"
+       inkscape:export-filename="rect111.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#ff5555;stroke-width:0.264583"
+       d="m 92.799502,202.77005 v 19.99981 l 20.000328,-19.99981 z"
+       id="path377" />
+  </g>
+</svg>

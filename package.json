@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write",
-    "commit": "bun `pwd`/scripts/commit.ts"
+    "commit": "bun scripts/commit.ts",
+    "generate:icons": "bun scripts/generate-icons.js"
   },
   "dependencies": {
     "next": "15.5.2",
@@ -18,12 +19,13 @@
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@biomejs/biome": "2.2.0",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
+    "favicons": "^7.2.0",
     "tailwindcss": "^4",
-    "@biomejs/biome": "2.2.0"
+    "typescript": "^5"
   }
 }
