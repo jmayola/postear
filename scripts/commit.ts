@@ -1,6 +1,5 @@
 import { exec } from "child_process";
 import readline from "node:readline";
-import VersionWriter from "./version";
 import { exit } from "node:process";
 
 // create interface for questions
@@ -20,10 +19,5 @@ function create_commit(response: string) {
     if (err) throw stderr;
     console.log("commit has been created; ", stdout);
   });
-  console.log("Changing version...");
-  if (VersionWriter()) {
-    VersionWriter();
-    console.log("Version has changed");
     exit(0);
-  }
 }

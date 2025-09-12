@@ -10,9 +10,11 @@ export default function VersionWriter() {
       return;
     }
     if (stdout) {
-      const commits = stdout.split("");
+      // add one in order to preload next version
+      const commits =  parseInt(stdout) + 1 
+      const splited = commits.toString().split("");
       // by using the number of commits, convert them to a version like string
-      convert_to_version(commits);
+      convert_to_version(splited);
     }
   });
 
@@ -53,3 +55,4 @@ export default function VersionWriter() {
   }
   return true
 }
+VersionWriter()
