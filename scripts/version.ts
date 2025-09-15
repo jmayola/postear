@@ -12,30 +12,27 @@ export default function VersionWriter() {
     if (stdout) {
       // add one in order to preload next version
       const commits =  parseInt(stdout) + 1 
-      const splited = commits.toString().split("");
+      const StringCommits = commits.toString()
       // by using the number of commits, convert them to a version like string
-      convert_to_version(splited);
+      convert_to_version(StringCommits);
     }
   });
 
-  function convert_to_version(commits: string[]) {
+  function convert_to_version(commits: string) {
     const get_version = format_version(commits);
     write_to_version_file(get_version);
   }
 
-  function format_version(commits: string[]) {
-    const alpha: number = 0;
-    const beta: number = 1;
-    const release: number = 2;
+  function format_version(commits: string) {
     switch (process.env.state) {
       case "alpha":
-        return `0.0.${commits[alpha]}`;
+        return `0.0.${commits}`;
       case "beta":
-        return `0.${commits[alpha]}.${commits[beta]}`;
+        return `0.1.${commits}`;
       case "release":
-        return `${commits[alpha]}.${commits[beta]}.${commits[release]}`;
+        return `1.0.${commits}`;
       default:
-        return `0.0.${commits[alpha]}`;
+        return `0.0.${commits}`;
     }
   }
 

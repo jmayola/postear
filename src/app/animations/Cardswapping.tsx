@@ -20,20 +20,23 @@ function Cardswapping() {
   return (
     <>
     <CardSticky
+          id="card_appear"
           height={Height}
           width={Width}
-          className="m-auto drop-shadow-xl drop-shadow-zinc-600 absolute top-[5%]"
+          className="m-auto drop-shadow-xl drop-shadow-zinc-600 absolute top-[5%] animate-appear"
         />
         
     <CardSticky
+          id="card_stay"
           height={Height}
           width={Width}
           className="m-auto drop-shadow-xl drop-shadow-zinc-600 absolute top-[15%] left-[10%]"
         />
     <CardSticky
+          id="card_disappear"
           height={Height}
           width={Width}
-          className="m-auto drop-shadow-xl drop-shadow-zinc-600 absolute top-[25%] left-[20%]"
+          className="m-auto drop-shadow-xl drop-shadow-zinc-600 absolute top-[25%] left-[20%] animate-vanish"
         />
 
     </>
