@@ -29,7 +29,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/70 dark:border-slate-800/70">
+    <header className="sticky top-0 z-50 border-b border-slate-200/70 dark:border-slate-800/70" suppressHydrationWarning>
       <div className="glass">
         <div className="container mx-auto max-w-5xl px-4 py-3 flex items-center justify-between">
           <a

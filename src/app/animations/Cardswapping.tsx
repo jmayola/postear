@@ -6,37 +6,36 @@ function Cardswapping() {
   const [Height, setHeight] = useState(0)
   useEffect(() => {
     return () => {
-      if(window.innerWidth){
         setWidth(100 * 3)
         setHeight(125 * 3)
-      }
-      else{
-        setWidth(window.innerWidth / 2)
-        setHeight(window.innerHeight / 2)
-      }
+      
+    // load animation
+    if (typeof window !== 'undefined') CardsAnimation()
     }
   }, [])
   
   return (
     <>
     <CardSticky
-          id="card_appear"
+          id="card_0"
           height={Height}
           width={Width}
-          className="m-auto drop-shadow-xl drop-shadow-zinc-600 absolute top-[5%] animate-appear"
+          primary_color='#ff00ff'
+          className="m-auto drop-shadow-xl drop-shadow-zinc-600 absolute"
         />
         
     <CardSticky
-          id="card_stay"
+          id="card_1"
           height={Height}
           width={Width}
-          className="m-auto drop-shadow-xl drop-shadow-zinc-600 absolute top-[15%] left-[10%]"
+          primary_color='#ffff00'
+          className="m-auto drop-shadow-xl drop-shadow-zinc-600 absolute"
         />
     <CardSticky
-          id="card_disappear"
+          id="card_2"
           height={Height}
           width={Width}
-          className="m-auto drop-shadow-xl drop-shadow-zinc-600 absolute top-[25%] left-[20%] animate-vanish"
+          className="m-auto drop-shadow-xl drop-shadow-zinc-600 absolute"
         />
 
     </>

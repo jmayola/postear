@@ -17,7 +17,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={amarante.className} suppressHydrationWarning={true}>
+    <html lang="en" className={amarante.className} suppressHydrationWarning>
       <Head>
           <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
       <link
