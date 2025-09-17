@@ -1,19 +1,18 @@
 import CardSticky from '@/components/svg/Cardsticky'
 import React, { useEffect, useState } from 'react'
-
+import CardsAnimation from '@/app/animations/CardsAnimation'
 function Cardswapping() {
-  const [Width, setWidth] = useState(0)
-  const [Height, setHeight] = useState(0)
+  const [Width, setWidth] = useState(100 *3)
+  const [Height, setHeight] = useState(125 *3)
   useEffect(() => {
     return () => {
         setWidth(100 * 3)
         setHeight(125 * 3)
-      
-    // load animation
-    if (typeof window !== 'undefined') CardsAnimation()
     }
   }, [])
-  
+  if(typeof document !== 'undefined' && !!document.cookie){
+    CardsAnimation()
+  }
   return (
     <>
     <CardSticky
@@ -37,9 +36,7 @@ function Cardswapping() {
           width={Width}
           className="m-auto drop-shadow-xl drop-shadow-zinc-600 absolute"
         />
-
     </>
-    
   )
 }
 

@@ -71,7 +71,7 @@ p {
   --animate-appear: appear 1s ease-in-out forwards;
   @keyframes appear {
     0% {
-        opacity: 0.3;
+        opacity: 0;
         left: 100%;
     }
     100%{
@@ -90,3 +90,8 @@ p {
     }
   }
 }
+
+/* Cards animanation status */
+.card_appear { @apply top-[5%] left-[0%] animate-appear z-0 }
+.card_stay { @apply top-[15%] left-[10%] z-10 }
+.card_disappear { @apply top-[25%] left-[20%] z-20}

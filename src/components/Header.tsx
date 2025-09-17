@@ -13,23 +13,24 @@ export default function Header() {
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    const saved =
-      typeof window !== "undefined" && localStorage.getItem("theme");
+    const saved = localStorage.getItem("theme");
     const prefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    const defaultTheme = prefersDark ? "dark" : "light"
+    
+    saved ? setTheme(saved) : setTheme(defaultTheme)
       
-    prefersDark ? setTheme("dark") : setTheme("light")
   }, []);
 
   const toggleTheme = () => {
     theme == 'dark' ? setTheme("light") : setTheme("dark")
-    console.log(theme)
     localStorage.setItem("theme",String(theme))
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/70 dark:border-slate-800/70" suppressHydrationWarning>
+    <header className="sticky top-0 z-50 border-b border-slate-200/70 dark:border-slate-800/70">
       <div className="glass">
         <div className="container mx-auto max-w-5xl px-4 py-3 flex items-center justify-between">
           <a
@@ -56,6 +57,7 @@ export default function Header() {
             </a>
           </nav>
           <button
+            suppressHydrationWarning
             onClick={() => {
               toggleTheme();
             }}
