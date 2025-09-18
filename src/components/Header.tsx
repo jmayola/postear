@@ -20,8 +20,7 @@ export default function Header() {
 
     const defaultTheme = prefersDark ? "dark" : "light"
     
-    saved ? setTheme(saved) : setTheme(defaultTheme)
-      
+    return saved ? setTheme(saved) : setTheme(defaultTheme)
   }, []);
 
   const toggleTheme = () => {

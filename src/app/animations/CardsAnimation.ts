@@ -34,7 +34,7 @@ export default function CardsAnimation() {
     }
     setTimeout(()=>{
       cards[2].classList.add("animate-vanish");
-    },2000)
+    },3500)
   }, 4500);
 }
 function GET(lang: string) {

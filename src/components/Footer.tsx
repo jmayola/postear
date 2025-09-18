@@ -23,12 +23,20 @@ export default function Footer() {
 
   return (
     <footer className="mt-16 border-t border-slate-200 dark:border-slate-800">
-      <div className="container mx-auto max-w-5xl px-4 py-6 text-sm text-slate-600 dark:text-slate-300 items-center justify-between grid grid-cols-3">
-        <p>
+      <div className="mx-auto max-w-screen px-4 py-6 text-sm text-slate-600 dark:text-slate-300 grid grid-cols-3 gap-[15%] justify-around items-center">
+        <p className="text-center">
           Hecho con <span className="text-rose-500">❤</span> por Julian Mayola —
           Version {Version}
         </p>
-        <div className="block">
+        <a
+          href="https://github.com/jmayola/postear"
+          target="_blank"
+          rel="noreferrer"
+          className="flex justify-center items-center gap-2 hover:text-slate-900 dark:hover:text-white"
+        >
+          <IoLogoGithub size={32} />
+        </a>
+        <div className="flex justify-center items-center flex-col ">
           <h4 className="text-2xl font-bold ">Navegador</h4>
           <ul>
             <a href="/notes">
@@ -39,14 +47,7 @@ export default function Footer() {
             </a>
           </ul>
         </div>
-        <a
-          href="https://github.com/jmayola/postear"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2 hover:text-slate-900 dark:hover:text-white"
-        >
-          <IoLogoGithub size={32} />
-        </a>
+        
       </div>
     </footer>
   );

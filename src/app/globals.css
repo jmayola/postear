@@ -83,15 +83,32 @@ p {
   @keyframes vanish {
     0% {
         opacity: 1;
+        top: 15%;
+        left: 10%
+    }
+    15%{
+        top: 25%;
+        left: 20%
     }
     100%{
         opacity: 0;
         bottom: -20%;
     }
   }
+  --animate-movee: movee 1s ease-in-out forwards;
+  @keyframes movee {
+    0% {
+        top: 5%;
+        left: 0%;
+    }
+    100%{
+        top: 15%;
+        left: 10%
+    }
+  }
 }
 
 /* Cards animanation status */
 .card_appear { @apply top-[5%] left-[0%] animate-appear z-0 }
-.card_stay { @apply top-[15%] left-[10%] z-10 }
+.card_stay { @apply top-[15%] left-[10%] z-10  animate-movee}
 .card_disappear { @apply top-[25%] left-[20%] z-20}

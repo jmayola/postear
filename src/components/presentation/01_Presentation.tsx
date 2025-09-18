@@ -3,7 +3,7 @@
 import Cardswapping from "@/app/animations/Cardswapping";
 function Presentation() {
   return (
-    <section className="grid grid-cols-2 h-screen-nav w-screen p-5">
+    <section className="grid grid-cols-2 h-screen-nav w-screen p-8">
       <div className="z-10">
         <h1 className="heading-1">Postear!</h1>
         <h2 className="heading-2 ">
