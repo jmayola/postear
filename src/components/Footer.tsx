@@ -16,9 +16,7 @@ export default function Footer() {
   }
 
   useEffect(() => {
-    return () => {
       getVersion();
-    };
   }, []);
 
   return (
